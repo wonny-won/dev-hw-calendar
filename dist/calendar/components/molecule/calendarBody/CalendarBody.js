@@ -25,7 +25,7 @@ export default function CalendarBody(props) {
             return;
         props.onChange("".concat(props.currDate, " . ").concat(e.currentTarget.innerHTML));
     };
-    return (_jsxs(S.CalendarBodyWrap, { children: [dayOfTheWeed.map(function (i) { return (_jsx(T2, { children: i })); }), currMothDayArr.map(function (i) { return (_jsx(CalendarBtn, { isBody: true, btnText: i, style: {
+    return (_jsxs(S.CalendarBodyWrap, { children: [dayOfTheWeed.map(function (i, idx) { return (_jsx(T2, { children: i }, idx)); }), currMothDayArr.map(function (i) { return (_jsx(CalendarBtn, { isBody: true, btnText: i, style: {
                     width: '34px',
                     height: '34px',
                     justifyContent: 'center',
