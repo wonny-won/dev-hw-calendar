@@ -1,2 +1,2 @@
 /** @format */
-export default function Calendar(): import("react/jsx-runtime").JSX.Element;
+export { default as Calendar } from './calendar';
