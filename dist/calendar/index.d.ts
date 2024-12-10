@@ -1,1 +1,6 @@
-export default function Calendar(): import("react/jsx-runtime").JSX.Element;
+interface CalendarProp {
+    value?: any;
+    onChange?: any;
+}
+export default function Calendar(props: CalendarProp): import("react/jsx-runtime").JSX.Element;
+export {};
