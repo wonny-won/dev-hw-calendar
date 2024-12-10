@@ -1,6 +1,5 @@
 /** @format */
-import React from 'react';
-import { useRecoilState } from 'recoil';
+import React, { Dispatch, SetStateAction } from 'react';
 import { getChangedMonth, getChangedYear } from '../../../commons/util';
 import CalendarBtn from '../../atoms/Btns/Btn';
 import CheckedDate from '../../atoms/checkedDate/CheckedDate';
@@ -9,11 +8,13 @@ import NextYear from '../../atoms/incons/NextYear';
 import PrevMonth from '../../atoms/incons/PrevMonth';
 import PrevYear from '../../atoms/incons/PrevYear';
 import * as S from './style';
-import { checkedDate } from '../../../commons/recoilAtom';
 
-export default function Header() {
-	const [currDate, setCurrDate] = useRecoilState(checkedDate);
+interface HeaderProp {
+	currDate: string;
+	setCurrDate: Dispatch<SetStateAction<any>>;
+}
 
+export default function Header(props: HeaderProp) {
 	/*****************************************************************
 	 *  prev, next 버튼 클릭에 따라 global state 변경
 	 *
@@ -23,10 +24,10 @@ export default function Header() {
 	 *****************************************************************/
 	const changeDate = (isPrev: boolean, isChangeMonth: boolean) => {
 		// moth
-		const resMoth = getChangedMonth(currDate, isPrev);
+		const resMoth = getChangedMonth(props.currDate, isPrev);
 		// yaer
-		const resYear = getChangedYear(currDate, isPrev);
-		setCurrDate(isChangeMonth ? resMoth : resYear);
+		const resYear = getChangedYear(props.currDate, isPrev);
+		props.setCurrDate(isChangeMonth ? resMoth : resYear);
 
 		return true;
 	};
@@ -37,7 +38,7 @@ export default function Header() {
 				<CalendarBtn children={<PrevYear />} onClickFn={() => changeDate(true, false)} />
 				<CalendarBtn children={<PrevMonth />} onClickFn={() => changeDate(true, true)} />
 			</div>
-			<CheckedDate />
+			<CheckedDate currDate={props.currDate} />
 			<div>
 				<CalendarBtn children={<NextMonth />} onClickFn={() => changeDate(false, true)} />
 				<CalendarBtn children={<NextYear />} onClickFn={() => changeDate(false, false)} />

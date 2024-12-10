@@ -1,7 +1,5 @@
 /** @format */
 import React from 'react';
-import { useRecoilState } from 'recoil';
-import { checkedDate } from '../../../commons/recoilAtom';
 import { getDaysInMonth } from '../../../commons/util';
 import CalendarBtn from '../../atoms/Btns/Btn';
 import * as S from './style';
@@ -10,13 +8,14 @@ import { Dispatch, SetStateAction } from 'react';
 
 interface CalendarProp {
 	onChange: Dispatch<SetStateAction<any>>;
+	currDate: string;
+	setCurrDate: Dispatch<SetStateAction<any>>;
 }
 
 export default function CalendarBody(props: CalendarProp) {
 	let currMothDayArr = [];
 	const dayOfTheWeed = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-	const [currDate] = useRecoilState(checkedDate);
-	const date = currDate.split('.');
+	const date = props.currDate.split('.');
 	const days = getDaysInMonth(date[0], date[1]);
 
 	for (let i = 1; i <= days; i++) {
@@ -34,17 +33,17 @@ export default function CalendarBody(props: CalendarProp) {
 	 *************************************************************/
 	const onClickChangeDate = (e: any) => {
 		if (!props.onChange) return;
-		props.onChange(`${currDate} . ${e.currentTarget.innerHTML}`);
+		props.onChange(`${props.currDate} . ${e.currentTarget.innerHTML}`);
 	};
 
 	return (
 		<S.CalendarBodyWrap>
-			{dayOfTheWeed.map((i: string) => (
-				<T2>{i}</T2>
+			{dayOfTheWeed.map((i: string, idx: number) => (
+				<T2 key={idx}>{i}</T2>
 			))}
 			{currMothDayArr.map((i: number) => (
 				<CalendarBtn
-					key={currDate + i}
+					key={props.currDate + i}
 					isBody={true}
 					btnText={i}
 					style={{

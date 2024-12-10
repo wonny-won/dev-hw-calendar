@@ -1,1 +1,5 @@
-export default function CheckedDate(): import("react/jsx-runtime").JSX.Element;
+interface CheckedDateProp {
+    currDate: string;
+}
+export default function CheckedDate(props: CheckedDateProp): import("react/jsx-runtime").JSX.Element;
+export {};

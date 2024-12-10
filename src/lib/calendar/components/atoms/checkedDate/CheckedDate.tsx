@@ -1,11 +1,11 @@
 /** @format */
 import React from 'react';
-import { useRecoilState } from 'recoil';
 import * as S from '../../../commons/commonStyle';
-import { checkedDate } from '../../../commons/recoilAtom';
 
-export default function CheckedDate() {
-	const [currDate] = useRecoilState(checkedDate);
+interface CheckedDateProp {
+	currDate: string;
+}
 
-	return <S.T1>{currDate}</S.T1>;
+export default function CheckedDate(props: CheckedDateProp) {
+	return <S.T1>{props.currDate}</S.T1>;
 }

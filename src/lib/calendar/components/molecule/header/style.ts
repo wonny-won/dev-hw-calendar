@@ -2,7 +2,7 @@
 
 import styled from '@emotion/styled';
 
-export const HeaderWrap = styled.header`
+export const HeaderWrap = styled.div`
 	display: flex;
 	width: 270px;
 	height: 35px;
