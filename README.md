@@ -24,11 +24,11 @@
 ## Demo : 빠른 시작
 ### Installation
 ```
-[**npm**]
-npm install dev-hw-calendar
+npm
+$ npm install dev-hw-calendar
 
-[**yarn**]
-yarn add dev-hw-calendar
+yarn
+$ yarn add dev-hw-calendar
 ```
 
 ### Usage
