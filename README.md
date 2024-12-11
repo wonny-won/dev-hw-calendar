@@ -60,5 +60,14 @@ function MyApp() {
 <br/>
 <br/>
 
+## After...
+- 요일 패치예정
+- 기능 추가
+   - react-calendar 처럼 기능 제공 예정입니다.
+- 캘린더 라이브러리 설명 홈페이지 만들어볼 예정입니다.
+   
+<br/>
+<br/>
+
 ## Study Blog 
 [✨ 캘린더 오픈소스 배포](https://dev-raccoon-man.tistory.com/74)
