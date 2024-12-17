@@ -63,6 +63,12 @@ export const getChangedYear = (currDate: string, isPrev: boolean) => {
 	return `${resYear ?? currYear} . ${currMoth}`;
 };
 
+/**
+ * 선택된 달이 며칠까지 있는지 알려주는 함수
+ * @param year : 선택된 년도
+ * @param month : 선택된 달
+ * @returns 선택된 달의 일수
+ */
 export const getDaysInMonth = (year: string, month: string) => {
 	return new Date(Number(year), Number(month), 0).getDate();
 };
