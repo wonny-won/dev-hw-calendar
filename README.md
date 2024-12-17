@@ -1,6 +1,7 @@
 # dev-hw-calendar
 
-![GIFMaker_me](https://github.com/user-attachments/assets/95bd92ae-613f-4162-98c0-b6a7f2598936)
+![GIFMaker_me](https://github.com/user-attachments/assets/8da6ad1e-6086-46a1-8441-d514e37e37d6)
+
 ### ✓ 제공기능
 - 날짜 선택
 - 이전, 이후 달
@@ -57,7 +58,7 @@ function MyApp() {
 <br/>
 
 ## After...
-- 요일 패치예정
+- 리렌더 개선 예정
 - 기능 추가
    - react-calendar 처럼 기능 제공 예정입니다.
 - 캘린더 라이브러리 설명 홈페이지 만들어볼 예정입니다.
