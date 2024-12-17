@@ -1,8 +1,4 @@
 # dev-hw-calendar
-> 📌 **요일은 아직 적용안됐습니다.**
-
-<br/>
-
 
 ![GIFMaker_me](https://github.com/user-attachments/assets/95bd92ae-613f-4162-98c0-b6a7f2598936)
 ### ✓ 제공기능
