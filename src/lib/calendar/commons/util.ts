@@ -66,3 +66,15 @@ export const getChangedYear = (currDate: string, isPrev: boolean) => {
 export const getDaysInMonth = (year: string, month: string) => {
 	return new Date(Number(year), Number(month), 0).getDate();
 };
+
+/**
+ * 해당달의 시작 요일을 구하는 함수
+ * @param year : 선택된 년도
+ * @param month : 선택된 달
+ * @returns : 시작되는 요일
+ */
+export const getFirstDayOfMonth = (year: string, month: string) => {
+	const date = new Date(Number(year), Number(month) - 1, 1);
+	const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+	return days[date.getDay()];
+};

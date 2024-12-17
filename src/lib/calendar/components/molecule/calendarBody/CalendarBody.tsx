@@ -1,6 +1,6 @@
 /** @format */
 import React from 'react';
-import { getDaysInMonth } from '../../../commons/util';
+import { getDaysInMonth, getFirstDayOfMonth } from '../../../commons/util';
 import CalendarBtn from '../../atoms/Btns/Btn';
 import * as S from './style';
 import { T2 } from '../../../commons/commonStyle';
@@ -14,12 +14,23 @@ interface CalendarProp {
 
 export default function CalendarBody(props: CalendarProp) {
 	let currMothDayArr = [];
-	const dayOfTheWeed = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-	const date = props.currDate.split('.');
-	const days = getDaysInMonth(date[0], date[1]);
+	const dayOfTheWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+	const yearMonth = props.currDate.split('.');
+	const monthStartDate = getFirstDayOfMonth(yearMonth[0], yearMonth[1]);
+	const days = getDaysInMonth(yearMonth[0], yearMonth[1]);
+	const firstDateOfMonth = dayOfTheWeek.indexOf(monthStartDate);
 
-	for (let i = 1; i <= days; i++) {
-		currMothDayArr[i - 1] = i;
+	if (firstDateOfMonth) {
+		for (let i = 1; i <= firstDateOfMonth; i++) {
+			currMothDayArr[i - 1] = '';
+		}
+		for (let i = 1; i <= days; i++) {
+			currMothDayArr[i - 1 + firstDateOfMonth] = i;
+		}
+	} else {
+		for (let i = 1; i <= days; i++) {
+			currMothDayArr[i - 1] = i;
+		}
 	}
 
 	/*************************************************************
@@ -38,12 +49,12 @@ export default function CalendarBody(props: CalendarProp) {
 
 	return (
 		<S.CalendarBodyWrap>
-			{dayOfTheWeed.map((i: string, idx: number) => (
+			{dayOfTheWeek.map((i: string, idx: number) => (
 				<T2 key={idx}>{i}</T2>
 			))}
-			{currMothDayArr.map((i: number) => (
+			{currMothDayArr.map((i: number | string | null, idx) => (
 				<CalendarBtn
-					key={props.currDate + i}
+					key={props.currDate + i + idx}
 					isBody={true}
 					btnText={i}
 					style={{

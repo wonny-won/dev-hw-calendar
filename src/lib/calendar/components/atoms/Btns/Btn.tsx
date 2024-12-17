@@ -5,7 +5,7 @@ import { ReactNode } from 'react';
 import * as S from './style';
 
 interface BtnCompProps {
-	btnText?: string | number;
+	btnText?: string | number | null;
 	children?: ReactNode;
 	onClickFn?: (e?: any) => boolean | void;
 	isBody?: boolean;
