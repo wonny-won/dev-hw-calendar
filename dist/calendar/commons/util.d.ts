@@ -23,3 +23,10 @@ export declare const getChangedMonth: (currDate: string, isPrev: boolean) => str
  */
 export declare const getChangedYear: (currDate: string, isPrev: boolean) => string;
 export declare const getDaysInMonth: (year: string, month: string) => number;
+/**
+ * 해당달의 시작 요일을 구하는 함수
+ * @param year : 선택된 년도
+ * @param month : 선택된 달
+ * @returns : 시작되는 요일
+ */
+export declare const getFirstDayOfMonth: (year: string, month: string) => string;

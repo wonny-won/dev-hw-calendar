@@ -1,15 +1,27 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { getDaysInMonth } from '../../../commons/util';
+import { getDaysInMonth, getFirstDayOfMonth } from '../../../commons/util';
 import CalendarBtn from '../../atoms/Btns/Btn';
 import * as S from './style';
 import { T2 } from '../../../commons/commonStyle';
 export default function CalendarBody(props) {
     var currMothDayArr = [];
-    var dayOfTheWeed = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-    var date = props.currDate.split('.');
-    var days = getDaysInMonth(date[0], date[1]);
-    for (var i = 1; i <= days; i++) {
-        currMothDayArr[i - 1] = i;
+    var dayOfTheWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    var yearMonth = props.currDate.split('.');
+    var monthStartDate = getFirstDayOfMonth(yearMonth[0], yearMonth[1]);
+    var days = getDaysInMonth(yearMonth[0], yearMonth[1]);
+    var firstDateOfMonth = dayOfTheWeek.indexOf(monthStartDate);
+    if (firstDateOfMonth) {
+        for (var i = 1; i <= firstDateOfMonth; i++) {
+            currMothDayArr[i - 1] = '';
+        }
+        for (var i = 1; i <= days; i++) {
+            currMothDayArr[i - 1 + firstDateOfMonth] = i;
+        }
+    }
+    else {
+        for (var i = 1; i <= days; i++) {
+            currMothDayArr[i - 1] = i;
+        }
     }
     /*************************************************************
      * 사용자 이벤트(클릭)에 따른 date 변경
@@ -25,10 +37,10 @@ export default function CalendarBody(props) {
             return;
         props.onChange("".concat(props.currDate, " . ").concat(e.currentTarget.innerHTML));
     };
-    return (_jsxs(S.CalendarBodyWrap, { children: [dayOfTheWeed.map(function (i, idx) { return (_jsx(T2, { children: i }, idx)); }), currMothDayArr.map(function (i) { return (_jsx(CalendarBtn, { isBody: true, btnText: i, style: {
+    return (_jsxs(S.CalendarBodyWrap, { children: [dayOfTheWeek.map(function (i, idx) { return (_jsx(T2, { children: i }, idx)); }), currMothDayArr.map(function (i, idx) { return (_jsx(CalendarBtn, { isBody: true, btnText: i, style: {
                     width: '34px',
                     height: '34px',
                     justifyContent: 'center',
                     alignItems: 'center',
-                }, onClickFn: function (e) { return onClickChangeDate(e); } }, props.currDate + i)); })] }));
+                }, onClickFn: function (e) { return onClickChangeDate(e); } }, props.currDate + i + idx)); })] }));
 }

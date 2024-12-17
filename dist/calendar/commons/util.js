@@ -63,3 +63,14 @@ export var getChangedYear = function (currDate, isPrev) {
 export var getDaysInMonth = function (year, month) {
     return new Date(Number(year), Number(month), 0).getDate();
 };
+/**
+ * 해당달의 시작 요일을 구하는 함수
+ * @param year : 선택된 년도
+ * @param month : 선택된 달
+ * @returns : 시작되는 요일
+ */
+export var getFirstDayOfMonth = function (year, month) {
+    var date = new Date(Number(year), Number(month) - 1, 1);
+    var days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    return days[date.getDay()];
+};
