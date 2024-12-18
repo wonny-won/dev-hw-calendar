@@ -50,7 +50,7 @@ export default function CalendarBody(props: CalendarProp) {
 	return (
 		<S.CalendarBodyWrap>
 			{dayOfTheWeek.map((i: string, idx: number) => (
-				<T2 key={idx}>{i}</T2>
+				<T2 key={props.currDate + i + idx}>{i}</T2>
 			))}
 			{currMothDayArr.map((i: number | string | null, idx) => (
 				<CalendarBtn

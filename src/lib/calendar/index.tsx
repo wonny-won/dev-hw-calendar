@@ -1,5 +1,5 @@
 /** @format */
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import CalendarBody from '../calendar/components/molecule/calendarBody/CalendarBody';
 import Header from '../calendar/components/molecule/header/Header';
 import { convertDateFromFn } from './commons/util';
@@ -9,7 +9,7 @@ interface CalendarProp {
 	onChange?: any;
 }
 
-export default function Calendar(props: CalendarProp) {
+function Calendar(props: CalendarProp) {
 	const [currDate, setCurrDate] = useState(convertDateFromFn(new Date()));
 
 	return (
@@ -25,3 +25,4 @@ export default function Calendar(props: CalendarProp) {
 		</div>
 	);
 }
+export default memo(Calendar);

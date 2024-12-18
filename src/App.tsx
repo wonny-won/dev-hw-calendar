@@ -1,9 +1,10 @@
 /** @format */
 
-import React from 'react';
+import React, { useState } from 'react';
 import Calendar from '../src/lib/calendar';
 
 function App() {
+	const [value, setState] = useState();
 	return (
 		<div className='App'>
 			{/* <header className='App-header'>
@@ -15,7 +16,8 @@ function App() {
 					Learn React
 				</a>
 			</header> */}
-			<Calendar />
+			<Calendar onChange={setState} />
+			<div>선택한 날짜는 {value} 이에오 </div>
 		</div>
 	);
 }
