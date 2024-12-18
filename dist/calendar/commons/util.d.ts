@@ -22,6 +22,12 @@ export declare const getChangedMonth: (currDate: string, isPrev: boolean) => str
  * @returns 'YYYY.MM'
  */
 export declare const getChangedYear: (currDate: string, isPrev: boolean) => string;
+/**
+ * 선택된 달이 며칠까지 있는지 알려주는 함수
+ * @param year : 선택된 년도
+ * @param month : 선택된 달
+ * @returns 선택된 달의 일수
+ */
 export declare const getDaysInMonth: (year: string, month: string) => number;
 /**
  * 해당달의 시작 요일을 구하는 함수

@@ -60,6 +60,12 @@ export var getChangedYear = function (currDate, isPrev) {
     }
     return "".concat(resYear !== null && resYear !== void 0 ? resYear : currYear, " . ").concat(currMoth);
 };
+/**
+ * 선택된 달이 며칠까지 있는지 알려주는 함수
+ * @param year : 선택된 년도
+ * @param month : 선택된 달
+ * @returns 선택된 달의 일수
+ */
 export var getDaysInMonth = function (year, month) {
     return new Date(Number(year), Number(month), 0).getDate();
 };
