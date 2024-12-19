@@ -1,6 +1,5 @@
 /** @format */
 import React, { Dispatch, SetStateAction } from 'react';
-import { getChangedMonth, getChangedYear } from '../../../commons/util';
 import CalendarBtn from '../../atoms/Btns/Btn';
 import CheckedDate from '../../atoms/checkedDate/CheckedDate';
 import NextMonth from '../../atoms/incons/NextMonth';
@@ -8,6 +7,7 @@ import NextYear from '../../atoms/incons/NextYear';
 import PrevMonth from '../../atoms/incons/PrevMonth';
 import PrevYear from '../../atoms/incons/PrevYear';
 import * as S from './style';
+import { getChangedMonth, getChangedYear } from '../../../commons/util';
 
 interface HeaderProp {
 	currDate: string;

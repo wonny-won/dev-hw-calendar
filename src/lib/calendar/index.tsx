@@ -1,8 +1,8 @@
 /** @format */
 import React, { memo, useState } from 'react';
-import CalendarBody from '../calendar/components/molecule/calendarBody/CalendarBody';
-import Header from '../calendar/components/molecule/header/Header';
-import { convertDateFromFn } from './commons/util';
+import { convertDateFromFn } from '../commons/util';
+import CalendarBody from '../components/molecule/calendarBody/CalendarBody';
+import CalendarHeader from '../components/molecule/calendarHeader/CalendarHeader';
 
 interface CalendarProp {
 	value?: any;
@@ -19,8 +19,9 @@ function Calendar(props: CalendarProp) {
 				boxShadow: '10px 15px 10px #f0efef',
 				display: 'inline-block',
 				borderRadius: '10px',
+				width: 'fit-content',
 			}}>
-			<Header currDate={currDate} setCurrDate={setCurrDate} />
+			<CalendarHeader currDate={currDate} setCurrDate={setCurrDate} />
 			<CalendarBody onChange={props.onChange} currDate={currDate} setCurrDate={setCurrDate} />
 		</div>
 	);

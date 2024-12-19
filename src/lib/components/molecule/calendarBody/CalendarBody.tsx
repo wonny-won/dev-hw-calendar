@@ -1,10 +1,10 @@
 /** @format */
 import React from 'react';
-import { getDaysInMonth, getFirstDayOfMonth } from '../../../commons/util';
 import CalendarBtn from '../../atoms/Btns/Btn';
 import * as S from './style';
-import { T2 } from '../../../commons/commonStyle';
 import { Dispatch, SetStateAction } from 'react';
+import { T2 } from '../../../commons/commonStyle';
+import { getDaysInMonth, getFirstDayOfMonth } from '../../../commons/util';
 
 interface CalendarProp {
 	onChange: Dispatch<SetStateAction<any>>;

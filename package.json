@@ -1,6 +1,6 @@
 {
 	"name": "dev-hw-calendar",
-	"version": "1.0.10",
+	"version": "2.0.10",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"browser": "./browser/specific/main.js",
