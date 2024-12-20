@@ -50,7 +50,7 @@ import { useState } from 'react';
 import { Calendar,DatePicker } from 'dev-hw-calendar';
 
 function MyApp() {
-  const [value, onChange] = useState(new Date());
+  const [value, onChange] = useState();
 
   return (
     <div>
