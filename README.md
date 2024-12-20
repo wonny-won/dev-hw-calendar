@@ -1,19 +1,31 @@
 # dev-hw-calendar
-
+✅ **calendar** <br/>
 ![GIFMaker_me](https://github.com/user-attachments/assets/8da6ad1e-6086-46a1-8441-d514e37e37d6)
+<br/>
+
+✅ **date-picker** <br/>
+![date-picker](https://github.com/user-attachments/assets/53e51011-cead-42c1-b6f3-44444d53beed)
+
 
 ### ✓ 제공기능
+******************[ calendar ]***********************
 - 날짜 선택
 - 이전, 이후 달
 - 이전, 이후 년도
+<br/>
+******************[ date-picker ]***********************
+- 인풋 선택시 캘린더 노출
+- 날짜 선택
+- 인풋 아이콘 달력 아이콘 선택
 
 <br/>
 <br/>
 
 ## 요약
 - ```npm install dev-hw-calendar``` 또는 ```yarn add dev-hw-calendar```를 통해 라리브러리를 install 하세요.
-- 프로젝트에 ```import { Calendar } from 'dev-hw-calendar'``` 하여 캘린더를 가져오세요.
-- 컴포넌트에 <Calendar/> 를 추가해 사용하세요.
+- 프로젝트에 ```import { Calendar,DatePicker } from 'dev-hw-calendar'``` 하여 캘린더를 가져오세요.
+- 컴포넌트에 <Calendar/>, <DatePicker/> 를 추가해 사용하세요.
+   - 필요한 컴포넌트만 import하여 추가해서 사용하면 됩니다.
 
 <br/>
 <br/>
@@ -31,7 +43,7 @@ $ yarn add dev-hw-calendar
 ### Usage
 ```
 import { useState } from 'react';
-import { Calendar } from 'dev-hw-calendar';
+import { Calendar,DatePicker } from 'dev-hw-calendar';
 
 function MyApp() {
   const [value, onChange] = useState(new Date());
@@ -39,6 +51,7 @@ function MyApp() {
   return (
     <div>
       <Calendar onChange={onChange} value={value} />
+      <DatePicker />
     </div>
   );
 }
@@ -57,11 +70,15 @@ function MyApp() {
 <br/>
 <br/>
 
+### Date Picker Prop
+| Prop name | Description | Default value | Eaxmple |
+|-------|----------------|---------|--------|
+|showIcon| input에 달력 아이콘 노출 여부 | false | true || false |
+
 ## After...
-- 리렌더 개선 예정
 - 기능 추가
-   - react-calendar 처럼 기능 제공 예정입니다.
-- 캘린더 라이브러리 설명 홈페이지 만들어볼 예정입니다.
+   - 여러기능을 제공 할 예정입니다.
+- 라이브러리 설명 홈페이지 만들어볼 예정입니다.
    
 <br/>
 <br/>
