@@ -54,7 +54,7 @@ function MyApp() {
 
   return (
     <div>
-      <Calendar onChange={onChange} value={value} />
+      <Calendar onChange={onChange} />
       <DatePicker />
     </div>
   );
