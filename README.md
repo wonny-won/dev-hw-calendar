@@ -88,6 +88,8 @@ function MyApp() {
 <br/>
 
 ## Study Blog 
+[✨ 데이트피커 성능 최적화](https://dev-raccoon-man.tistory.com/78)
+<br/>
 [✨ 캘린더 오픈소스 배포](https://dev-raccoon-man.tistory.com/74)
 <br/>
 [✨ 캘린더 제작기](https://dev-raccoon-man.tistory.com/75)
