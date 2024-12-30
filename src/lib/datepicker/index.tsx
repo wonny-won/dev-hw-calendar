@@ -1,9 +1,9 @@
 /** @format */
-import React from 'react';
+import React, { Suspense } from 'react';
 import { useState } from 'react';
-import Calendar from '../calendar/index';
 import * as S from './style';
 import CalendarIcon from '../components/atoms/incons/CalendarIcon';
+const Calendar = React.lazy(() => import('../calendar/index'));
 
 interface DatepickerProp {
 	inputSize?: string;
@@ -26,7 +26,7 @@ export default function DatePicker(props: DatepickerProp) {
 					value={value}
 				/>
 			</S.Input>
-			{isOpen && <Calendar onChange={setValue} />}
+			<Suspense fallback={<div>Loading...</div>}>{isOpen && <Calendar onChange={setValue} />}</Suspense>
 		</S.datePickerWrap>
 	);
 }
