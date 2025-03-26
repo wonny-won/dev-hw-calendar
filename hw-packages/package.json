@@ -4,6 +4,17 @@
 	"description": "dev-hw-date-picker 공통 모듈 패키지",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"require": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
+		},
+		"./types": {
+			"types": "./dist/types.d.ts"
+		}
+	},
 	"private": false,
 	"scripts": {
 		"link-packages": "bash link-packages.sh",
