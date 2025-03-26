@@ -10,12 +10,13 @@
 -   [ ] 세미 모노레포를 구성하고, 마이크로 프론트엔드를 구축합니다. <br/> - 디자인 시스템 / 공통 패키지 : hw-packages <br/> - 데이트 피커 : date-picker <br/> - 모노레포 루트 : dev-hw-date-picker <br/>
         <br/>
         <br/>
-        ✅ **calendar** <br/>
-        ![GIFMaker_me](https://github.com/user-attachments/assets/8da6ad1e-6086-46a1-8441-d514e37e37d6)
-        <br/>
 
 ✅ **date-picker** <br/>
 ![date-picker](https://github.com/user-attachments/assets/53e51011-cead-42c1-b6f3-44444d53beed)
+
+✅ **calendar** <br/>
+![GIFMaker_me](https://github.com/user-attachments/assets/8da6ad1e-6086-46a1-8441-d514e37e37d6)
+<br/>
 
 ### ✓ 제공기능
 
