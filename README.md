@@ -2,22 +2,18 @@
 
 # dev-hw-calendar
 
-✅ **calendar** <br/>
-![GIFMaker_me](https://github.com/user-attachments/assets/8da6ad1e-6086-46a1-8441-d514e37e37d6)
-<br/>
-
-✅ **date-picker** <br/>
-![date-picker](https://github.com/user-attachments/assets/53e51011-cead-42c1-b6f3-44444d53beed)
-
 ### 👷🏻 코드 공사 중 : 모노레포
 
 [ 목 표 ]
 공통 컴포넌트는 모듈화해 배포하고 공통으로 사용하는 의존성의 버전관리를 모노레포 루트 폴더에서 진행합니다.
 
--   [ ] 세미 모노레포를 구성하고, 마이크로 프론트엔드를 구축합니다.
-    -   디자인 시스템 / 공통 패키지 : hw-packages
-    -   데이트 피커 : date-picker
-    -   모노레포 루트 : dev-hw-date-picker
+-   [ ] 세미 모노레포를 구성하고, 마이크로 프론트엔드를 구축합니다. - 디자인 시스템 / 공통 패키지 : hw-packages - 데이트 피커 : date-picker - 모노레포 루트 : dev-hw-date-picker
+        ✅ **calendar** <br/>
+        ![GIFMaker_me](https://github.com/user-attachments/assets/8da6ad1e-6086-46a1-8441-d514e37e37d6)
+        <br/>
+
+✅ **date-picker** <br/>
+![date-picker](https://github.com/user-attachments/assets/53e51011-cead-42c1-b6f3-44444d53beed)
 
 ### ✓ 제공기능
 
