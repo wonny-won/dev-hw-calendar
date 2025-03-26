@@ -19,8 +19,8 @@ const Typography = ({ children, typo, color, ...props }: any) => {
  */
 const ContentWrapper = styled.div<{ $typo: Typo; $color?: string }>`
 	display: inline-block;
-	color: ${({ $color }) => (!!$color ? $color : 'inherit')};
-	font: ${({ $typo }) => ($typo && typo[`${$typo}`]) || 'inherit'};
+	color: ${({ $color }) => (!!$color && $color) || 'inherit'};
+	font: ${({ $typo }) => (!!$typo && typo[`${$typo}`]) || 'inherit'};
 	letter-spacing: 0;
 	white-space: pre-line;
 `;
