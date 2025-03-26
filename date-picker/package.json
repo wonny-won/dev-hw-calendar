@@ -1,0 +1,50 @@
+{
+	"name": "date-picker",
+	"version": "2.0.12",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"browser": "./browser/specific/main.js",
+	"private": false,
+	"dependencies": {
+		"cra-template-typescript": "1.2.0",
+		"hw-packages": "^1.0.6",
+		"react-scripts": "^3.4.4"
+	},
+	"scripts": {
+		"start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+		"build": "react-scripts build",
+		"build:lib": "rm -rf dist && tsc --project tsconfig.lib.json",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"prepare": "npm run build:lib",
+		"link-packages": "bash link-packages.sh"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"keyword": [
+		"calendar",
+		"dev-hw",
+		"dev-hw-calendar"
+	],
+	"description": "made by hyewon calendar",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wonny-won/dev-hw-calendar.git"
+	}
+}

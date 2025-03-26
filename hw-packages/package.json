@@ -1,0 +1,26 @@
+{
+	"name": "hw-packages",
+	"version": "1.0.6",
+	"description": "dev-hw-date-picker 공통 모듈 패키지",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"private": false,
+	"scripts": {
+		"link-packages": "bash link-packages.sh",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tsc && tsc --emitDeclarationOnly --outDir dist"
+	},
+	"keywords": [],
+	"author": "Jeong Hye-won <jaake0704@gmail.com>",
+	"license": "MIT",
+	"peerDependencies": {
+		"react": ">=16.8.0",
+		"react-dom": ">=16.8.0"
+	},
+	"devDependencies": {
+		"@types/jest": "^29.5.14",
+		"@types/react": "^19.0.12",
+		"@types/react-dom": "^19.0.4",
+		"typescript": "^5.8.2"
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"name": "dev-hw-date-picker",
+	"private": true,
+	"workspaces": [
+		"date-picker",
+		"hw-packages"
+	],
+	"version": "1.0.0",
+	"description": "데이트 피커 모노레포",
+	"main": "index.js",
+	"dependencies": {
+		"@emotion/react": "^11.14.0",
+		"@emotion/styled": "^11.14.0",
+		"eslint": "^6.8.0",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@types/jest": "^29.5.14",
+		"@types/react": "^19.0.12",
+		"@types/react-dom": "^19.0.4",
+		"typescript": "^5.8.2"
+	},
+	"scripts": {
+		"version": "npm run version:date-picker && npm run version:hw-packages",
+		"version:date-picker": "cd date-picker && npm version patch",
+		"version:packages": "cd hw-packages && npm version patch",
+		"publish": "npm run publish:date-picker && npm run publish:hw-packages",
+		"publish:date-picker": "cd date-picker && npm publish",
+		"publish:packages": "cd hw-packages && npm publish",
+		"build": "npm run build:date-picker && npm run build:hw-packages",
+		"build:date-picker": "cd date-picker && npm run build",
+		"build:packages": "cd hw-packages && npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wonny-won/dev-hw-calendar.git"
+	},
+	"keywords": [
+		"date-picker",
+		"calendar"
+	],
+	"author": "Jeong Hye-won <jaake0704@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/wonny-won/dev-hw-calendar/issues"
+	},
+	"homepage": "https://github.com/wonny-won/dev-hw-calendar#readme",
+	"packageManager": "yarn@4.7.0"
+}
