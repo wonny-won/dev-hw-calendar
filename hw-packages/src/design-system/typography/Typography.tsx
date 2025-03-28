@@ -1,12 +1,17 @@
 /** @format */
 
 import React from 'react';
-import _get from 'lodash/get';
 import styled from '@emotion/styled';
-import { token, typo, Typo } from './typo';
+import { typo, Typo } from './typo';
 
-const Typography = ({ children, typo, color, ...props }: any) => {
-	console.log('typo---', typo);
+type TypographyProps = {
+	children: React.ReactNode;
+	typo: Typo;
+	color?: string;
+	props?: any;
+};
+
+const Typography = ({ children, typo, color, ...props }: TypographyProps) => {
 	return (
 		<ContentWrapper $color={color} $typo={typo} {...props}>
 			{children}
