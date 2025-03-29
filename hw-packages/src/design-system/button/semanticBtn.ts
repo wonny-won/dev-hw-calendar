@@ -5,7 +5,7 @@ export const button = {
 		large: '12px 22px',
 		medium: '6px 16px',
 		small: '4px 11px',
-		xs: '3px',
+		xs: '9px',
 	},
 	borderRadius: {
 		large: '8px',
@@ -53,7 +53,7 @@ export const button = {
 			enabled: {
 				inherit: '#eee',
 				primary: '#eee',
-				info: '#eee',
+				info: '#fff',
 			},
 			hovered: {
 				inherit: 'black',

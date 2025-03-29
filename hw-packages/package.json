@@ -1,6 +1,6 @@
 {
 	"name": "hw-packages",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "dev-hw-date-picker 공통 모듈 패키지",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",

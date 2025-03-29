@@ -35,7 +35,7 @@ var Typography = function (_a) {
 /**
  * 타이포그래피 스타일
  */
-var ContentWrapper = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n\tdisplay: inline-block;\n\tcolor: ", ";\n\tfont: ", ";\n\tletter-spacing: 0;\n\twhite-space: pre-line;\n"], ["\n\tdisplay: inline-block;\n\tcolor: ", ";\n\tfont: ", ";\n\tletter-spacing: 0;\n\twhite-space: pre-line;\n"])), function (_a) {
+var ContentWrapper = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n\tdisplay: inline-block;\n\tcolor: ", ";\n\tfont: ", ";\n\tletter-spacing: 0;\n\twhite-space: pre-line;\n\ttext-align: center;\n"], ["\n\tdisplay: inline-block;\n\tcolor: ", ";\n\tfont: ", ";\n\tletter-spacing: 0;\n\twhite-space: pre-line;\n\ttext-align: center;\n"])), function (_a) {
     var $color = _a.$color;
     return (!!$color && $color) || 'inherit';
 }, function (_a) {

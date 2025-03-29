@@ -32,8 +32,10 @@ var Button = function (_a) {
     var children = _a.children, size = _a.size, color = _a.color, selected = _a.selected, props = __rest(_a, ["children", "size", "color", "selected"]);
     return (React.createElement(ButtonWrapper, __assign({ "$size": size, "$color": color, "$selected": selected }, props), children));
 };
-var ButtonWrapper = styled.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n\tbackground-color: transparent;\n\tpadding: ", ";\n\tcolor: ", ";\n\tborder: ", ";\n\tbackground: ", ";\n\tborder-radius: ", ";\n"], ["\n\tbackground-color: transparent;\n\tpadding: ", ";\n\tcolor: ", ";\n\tborder: ", ";\n\tbackground: ", ";\n\tborder-radius: ", ";\n"])), function (props) { return button.padding[props.$size] || button.padding['medium']; }, function (props) { return button.color.contained.enabled[props.$color] || button.color.contained.enabled['primary']; }, function (props) { return button.border.contained.enabled[props.$color] || button.border.contained.enabled['primary']; }, function (props) {
+var ButtonWrapper = styled.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n\tbackground-color: transparent;\n\tpadding: ", ";\n\tcolor: ", ";\n\tborder: ", ";\n\tbackground: ", ";\n\tborder-radius: ", ";\n\t&:hover {\n\t\tbackground-color: ", ";\n\t\tcursor: pointer;\n\t\tcolor: ", ";\n\t}\n"], ["\n\tbackground-color: transparent;\n\tpadding: ", ";\n\tcolor: ", ";\n\tborder: ", ";\n\tbackground: ", ";\n\tborder-radius: ", ";\n\t&:hover {\n\t\tbackground-color: ", ";\n\t\tcursor: pointer;\n\t\tcolor: ", ";\n\t}\n"])), function (props) { return button.padding[props.$size] || button.padding['medium']; }, function (props) { return button.color.contained.enabled[props.$color] || button.color.contained.enabled['primary']; }, function (props) { return button.border.contained.enabled[props.$color] || button.border.contained.enabled['primary']; }, function (props) {
     return button.background.contained.enabled[props.$color] || button.background.contained.enabled['primary'];
-}, function (props) { return button.borderRadius[props.$size] || button.borderRadius['medium']; });
+}, function (props) { return button.borderRadius[props.$size] || button.borderRadius['medium']; }, function (props) {
+    return button.background.contained.hovered[props.$color] || button.background.contained.hovered['primary'];
+}, function (props) { return button.color.contained.hovered[props.$color] || button.color.contained.hovered['primary']; });
 export default Button;
 var templateObject_1;

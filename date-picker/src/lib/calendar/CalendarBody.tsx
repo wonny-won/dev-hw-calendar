@@ -1,10 +1,9 @@
 /** @format */
 import React from 'react';
-import CalendarBtn from '../../atoms/Btns/Btn';
-import * as S from './style';
 import { Dispatch, SetStateAction } from 'react';
-import { T2 } from '../../../commons/commonStyle';
-import { getDaysInMonth, getFirstDayOfMonth } from '../../../commons/util';
+import { getDaysInMonth, getFirstDayOfMonth } from './util';
+import { CalendarButton, CalendarBodyWrap } from './calendar.style';
+import { Typography } from 'hw-packages';
 
 interface CalendarProp {
 	onChange: Dispatch<SetStateAction<any>>;
@@ -48,24 +47,22 @@ export default function CalendarBody(props: CalendarProp) {
 	};
 
 	return (
-		<S.CalendarBodyWrap>
+		<CalendarBodyWrap>
 			{dayOfTheWeek.map((i: string, idx: number) => (
-				<T2 key={props.currDate + i + idx}>{i}</T2>
+				<Typography key={props.currDate + i + idx} typo='body2'>
+					{i}
+				</Typography>
 			))}
 			{currMothDayArr.map((i: number | string | null, idx) => (
-				<CalendarBtn
+				<CalendarButton
 					key={props.currDate + i + idx}
-					isBody={true}
-					btnText={i}
-					style={{
-						width: '34px',
-						height: '34px',
-						justifyContent: 'center',
-						alignItems: 'center',
-					}}
-					onClickFn={(e: any) => onClickChangeDate(e)}
+					children={i}
+					size='xs'
+					color='info'
+					selected={true}
+					onClick={(e: any) => onClickChangeDate(e)}
 				/>
 			))}
-		</S.CalendarBodyWrap>
+		</CalendarBodyWrap>
 	);
 }

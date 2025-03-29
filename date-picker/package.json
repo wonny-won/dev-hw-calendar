@@ -7,12 +7,12 @@
 	"private": false,
 	"dependencies": {
 		"cra-template-typescript": "1.2.0",
-		"hw-packages": "^1.0.6",
+		"hw-packages": "file:../hw-packages/dist/design-system",
 		"react-scripts": "^3.4.4"
 	},
 	"scripts": {
 		"start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-		"build": "react-scripts build",
+		"build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
 		"build:lib": "rm -rf dist && tsc --project tsconfig.lib.json",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",

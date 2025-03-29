@@ -28,6 +28,7 @@ const ContentWrapper = styled.div<{ $typo: Typo; $color?: string }>`
 	font: ${({ $typo }) => (!!$typo && typo[`${$typo}`]) || 'inherit'};
 	letter-spacing: 0;
 	white-space: pre-line;
+	text-align: center;
 `;
 
 export default Typography;

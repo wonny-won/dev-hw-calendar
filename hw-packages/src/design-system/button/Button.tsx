@@ -9,7 +9,7 @@ type ButtonProps = {
 	size: 'xs' | 'small' | 'medium' | 'large';
 	color: 'primary' | 'inherit' | 'info';
 	selected: boolean;
-	props?: any;
+	[key: string]: any;
 };
 
 const Button = ({ children, size, color, selected, ...props }: ButtonProps) => {
@@ -19,6 +19,7 @@ const Button = ({ children, size, color, selected, ...props }: ButtonProps) => {
 		</ButtonWrapper>
 	);
 };
+
 const ButtonWrapper = styled.button<{
 	$size: 'xs' | 'small' | 'medium' | 'large';
 	$color: 'primary' | 'inherit' | 'info';
@@ -31,5 +32,11 @@ const ButtonWrapper = styled.button<{
 	background: ${(props) =>
 		button.background.contained.enabled[props.$color] || button.background.contained.enabled['primary']};
 	border-radius: ${(props) => button.borderRadius[props.$size] || button.borderRadius['medium']};
+	&:hover {
+		background-color: ${(props) =>
+			button.background.contained.hovered[props.$color] || button.background.contained.hovered['primary']};
+		cursor: pointer;
+		color: ${(props) => button.color.contained.hovered[props.$color] || button.color.contained.hovered['primary']};
+	}
 `;
 export default Button;

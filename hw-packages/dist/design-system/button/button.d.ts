@@ -5,7 +5,7 @@ type ButtonProps = {
     size: 'xs' | 'small' | 'medium' | 'large';
     color: 'primary' | 'inherit' | 'info';
     selected: boolean;
-    props?: any;
+    [key: string]: any;
 };
 declare const Button: ({ children, size, color, selected, ...props }: ButtonProps) => React.JSX.Element;
 export default Button;
