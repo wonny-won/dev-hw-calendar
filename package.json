@@ -5,7 +5,7 @@
 		"date-picker",
 		"hw-packages"
 	],
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "데이트 피커 모노레포",
 	"main": "index.js",
 	"dependencies": {
@@ -35,7 +35,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/wonny-won/dev-hw-calendar.git"
+		"url": "https://github.com/wonny-won/dev-hw-date-picker.git"
 	},
 	"keywords": [
 		"date-picker",
@@ -44,8 +44,8 @@
 	"author": "Jeong Hye-won <jaake0704@gmail.com>",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/wonny-won/dev-hw-calendar/issues"
+		"url": "https://github.com/wonny-won/dev-hw-date-picker/issues"
 	},
-	"homepage": "https://github.com/wonny-won/dev-hw-calendar#readme",
+	"homepage": "https://github.com/wonny-won/dev-hw-date-picker#readme",
 	"packageManager": "yarn@4.7.0"
 }

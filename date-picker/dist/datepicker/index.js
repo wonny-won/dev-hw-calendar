@@ -2,7 +2,7 @@
 import React, { Suspense } from 'react';
 import { useState } from 'react';
 import * as S from './style';
-import CalendarIcon from '../components/atoms/incons/CalendarIcon';
+import CalendarIcon from '../calendar/incons/CalendarIcon';
 const Calendar = React.lazy(() => import('../calendar/index'));
 export default function DatePicker(props) {
     const [isOpen, setIsOpen] = useState(false);

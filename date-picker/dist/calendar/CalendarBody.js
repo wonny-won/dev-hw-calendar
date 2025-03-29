@@ -1,9 +1,8 @@
 /** @format */
 import React from 'react';
-import CalendarBtn from '../../atoms/Btns/Btn';
-import * as S from './style';
-import { T2 } from '../../../commons/commonStyle';
-import { getDaysInMonth, getFirstDayOfMonth } from '../../../commons/util';
+import { getDaysInMonth, getFirstDayOfMonth } from './util';
+import { CalendarButton, CalendarBodyWrap } from './calendar.style';
+import { Typography } from 'hw-packages';
 export default function CalendarBody(props) {
     let currMothDayArr = [];
     const dayOfTheWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
@@ -38,12 +37,7 @@ export default function CalendarBody(props) {
             return;
         props.onChange(`${props.currDate} . ${e.currentTarget.innerHTML}`);
     };
-    return (React.createElement(S.CalendarBodyWrap, null,
-        dayOfTheWeek.map((i, idx) => (React.createElement(T2, { key: props.currDate + i + idx }, i))),
-        currMothDayArr.map((i, idx) => (React.createElement(CalendarBtn, { key: props.currDate + i + idx, isBody: true, btnText: i, style: {
-                width: '34px',
-                height: '34px',
-                justifyContent: 'center',
-                alignItems: 'center',
-            }, onClickFn: (e) => onClickChangeDate(e) })))));
+    return (React.createElement(CalendarBodyWrap, null,
+        dayOfTheWeek.map((i, idx) => (React.createElement(Typography, { key: props.currDate + i + idx, typo: 'body2' }, i))),
+        currMothDayArr.map((i, idx) => (React.createElement(CalendarButton, { key: props.currDate + i + idx, children: i, size: 'xs', color: 'info', selected: true, onClick: (e) => onClickChangeDate(e) })))));
 }

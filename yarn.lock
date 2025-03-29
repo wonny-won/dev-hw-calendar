@@ -4016,14 +4016,6 @@ data-view-byte-offset@^1.0.1:
     es-errors "^1.3.0"
     is-data-view "^1.0.1"
 
-"date-picker@file:/Users/jeonghyewon/Desktop/dev-hw-date-picker/date-picker":
-  version "2.0.12"
-  resolved "file:date-picker"
-  dependencies:
-    cra-template-typescript "1.2.0"
-    hw-packages "file:../hw-packages/dist/design-system"
-    react-scripts "^3.4.4"
-
 debug@^2.2.0:
   version "2.6.9"
   resolved "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
@@ -4213,6 +4205,14 @@ detect-port-alt@1.1.6:
   dependencies:
     address "^1.0.1"
     debug "^2.6.0"
+
+"dev-hw-date-picker@file:/Users/jeonghyewon/Desktop/dev-hw-date-picker/date-picker":
+  version "2.0.14"
+  resolved "file:date-picker"
+  dependencies:
+    cra-template-typescript "1.2.0"
+    hw-packages "file:../hw-packages/dist/design-system"
+    react-scripts "^3.4.4"
 
 diff-sequences@^24.9.0:
   version "24.9.0"
@@ -5992,7 +5992,7 @@ https-browserify@^1.0.0:
   resolved "file:hw-packages/dist/design-system"
 
 "hw-packages@file:/Users/jeonghyewon/Desktop/dev-hw-date-picker/hw-packages":
-  version "1.0.8"
+  version "1.0.9"
   resolved "file:hw-packages"
 
 iconv-lite@^0.4.24, iconv-lite@0.4.24:
