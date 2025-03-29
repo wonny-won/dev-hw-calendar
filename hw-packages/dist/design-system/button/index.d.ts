@@ -1,3 +1,3 @@
 /** @format */
-export { default as ButtonComponent } from './ButtonComponent';
+export { default as Button } from './Button';
 //# sourceMappingURL=index.d.ts.map

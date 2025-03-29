@@ -1,70 +1,39 @@
 /** @format */
-export var button = {
-    padding: {
-        large: '12px 22px',
-        medium: '6px 16px',
-        small: '4px 11px',
-        xs: '3px',
-    },
-    borderRadius: {
-        large: '8px',
-        medium: '8px',
-        small: '8px',
-        xs: '50% 50%',
-    },
-    color: {
-        contained: {
-            enabled: {
-                inherit: 'black',
-                primary: 'black',
-                info: 'black',
-            },
-            hovered: {
-                inherit: '#fff',
-                primary: '#fff',
-                info: '#fff',
-            },
-            disabled: '#ddd',
-        },
-    },
-    border: {
-        contained: {
-            enabled: {
-                inherit: 'none',
-                primary: 'none',
-                info: 'none',
-            },
-            hovered: {
-                inherit: 'none',
-                primary: 'none',
-                info: 'none',
-            },
-            disabled: 'none',
-            selected: {
-                inherit: 'none',
-                primary: 'none',
-                info: 'none',
-            },
-        },
-    },
-    background: {
-        contained: {
-            enabled: {
-                inherit: '#eee',
-                primary: '#eee',
-                info: '#eee',
-            },
-            hovered: {
-                inherit: 'black',
-                primary: 'black',
-                info: 'black',
-            },
-            disabled: '#ddd',
-            selected: {
-                inherit: 'black',
-                primary: 'black',
-                info: 'black',
-            },
-        },
-    },
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
 };
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
+import React from 'react';
+import styled from '@emotion/styled';
+import { button } from './semanticBtn';
+var Button = function (_a) {
+    var children = _a.children, size = _a.size, color = _a.color, selected = _a.selected, props = __rest(_a, ["children", "size", "color", "selected"]);
+    return (React.createElement(ButtonWrapper, __assign({ "$size": size, "$color": color, "$selected": selected }, props), children));
+};
+var ButtonWrapper = styled.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n\tbackground-color: transparent;\n\tpadding: ", ";\n\tcolor: ", ";\n\tborder: ", ";\n\tbackground: ", ";\n\tborder-radius: ", ";\n"], ["\n\tbackground-color: transparent;\n\tpadding: ", ";\n\tcolor: ", ";\n\tborder: ", ";\n\tbackground: ", ";\n\tborder-radius: ", ";\n"])), function (props) { return button.padding[props.$size] || button.padding['medium']; }, function (props) { return button.color.contained.enabled[props.$color] || button.color.contained.enabled['primary']; }, function (props) { return button.border.contained.enabled[props.$color] || button.border.contained.enabled['primary']; }, function (props) {
+    return button.background.contained.enabled[props.$color] || button.background.contained.enabled['primary'];
+}, function (props) { return button.borderRadius[props.$size] || button.borderRadius['medium']; });
+export default Button;
+var templateObject_1;

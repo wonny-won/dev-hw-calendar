@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled from '@emotion/styled';
-import { button } from './button';
+import { button } from './semanticBtn';
 
 type ButtonProps = {
 	children: React.ReactNode;
@@ -12,7 +12,7 @@ type ButtonProps = {
 	props?: any;
 };
 
-const ButtonComponent = ({ children, size, color, selected, ...props }: ButtonProps) => {
+const Button = ({ children, size, color, selected, ...props }: ButtonProps) => {
 	return (
 		<ButtonWrapper $size={size} $color={color} $selected={selected} {...props}>
 			{children}
@@ -32,4 +32,4 @@ const ButtonWrapper = styled.button<{
 		button.background.contained.enabled[props.$color] || button.background.contained.enabled['primary']};
 	border-radius: ${(props) => button.borderRadius[props.$size] || button.borderRadius['medium']};
 `;
-export default ButtonComponent;
+export default Button;

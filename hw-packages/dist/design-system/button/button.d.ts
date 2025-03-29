@@ -1,71 +1,12 @@
 /** @format */
-export declare const button: {
-    padding: {
-        large: string;
-        medium: string;
-        small: string;
-        xs: string;
-    };
-    borderRadius: {
-        large: string;
-        medium: string;
-        small: string;
-        xs: string;
-    };
-    color: {
-        contained: {
-            enabled: {
-                inherit: string;
-                primary: string;
-                info: string;
-            };
-            hovered: {
-                inherit: string;
-                primary: string;
-                info: string;
-            };
-            disabled: string;
-        };
-    };
-    border: {
-        contained: {
-            enabled: {
-                inherit: string;
-                primary: string;
-                info: string;
-            };
-            hovered: {
-                inherit: string;
-                primary: string;
-                info: string;
-            };
-            disabled: string;
-            selected: {
-                inherit: string;
-                primary: string;
-                info: string;
-            };
-        };
-    };
-    background: {
-        contained: {
-            enabled: {
-                inherit: string;
-                primary: string;
-                info: string;
-            };
-            hovered: {
-                inherit: string;
-                primary: string;
-                info: string;
-            };
-            disabled: string;
-            selected: {
-                inherit: string;
-                primary: string;
-                info: string;
-            };
-        };
-    };
+import React from 'react';
+type ButtonProps = {
+    children: React.ReactNode;
+    size: 'xs' | 'small' | 'medium' | 'large';
+    color: 'primary' | 'inherit' | 'info';
+    selected: boolean;
+    props?: any;
 };
-//# sourceMappingURL=button.d.ts.map
+declare const Button: ({ children, size, color, selected, ...props }: ButtonProps) => React.JSX.Element;
+export default Button;
+//# sourceMappingURL=Button.d.ts.map
