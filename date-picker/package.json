@@ -7,7 +7,7 @@
 	"private": false,
 	"dependencies": {
 		"cra-template-typescript": "1.2.0",
-		"hw-packages": "file:../hw-packages/dist/design-system",
+		"hw-packages": "1.0.9",
 		"react-scripts": "^3.4.4"
 	},
 	"scripts": {
