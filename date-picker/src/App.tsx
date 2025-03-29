@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import Calendar from '../src/lib/calendar';
 import DatePicker from '../src/lib/datepicker';
-import { Typography, Button } from 'hw-packages';
+import { Typography } from 'hw-packages';
+
 function App() {
 	const [value, setState] = useState();
 	return (
@@ -14,9 +15,9 @@ function App() {
 			<Typography $typo='heading1' $color='pink'>
 				Hello World
 			</Typography>
-			<Button size='medium' color='primary' selected={true} å>
+			{/* <Butto size='medium' color='primary' selected={true}>
 				Click me
-			</Button>
+			</Butto> */}
 		</div>
 	);
 }

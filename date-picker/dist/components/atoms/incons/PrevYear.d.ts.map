@@ -1,1 +1,1 @@
-{"version":3,"file":"PrevYear.d.ts","sourceRoot":"","sources":["../../../../src/lib/components/atoms/incons/PrevYear.tsx"],"names":[],"mappings":"AAAA,cAAc;AACd,OAAO,KAAK,MAAM,OAAO,CAAC;AAE1B,OAAO,EAAE,SAAS,EAAE,MAAM,mBAAmB,CAAC;0DAErB,SAAS;AAYlC,wBAA8B"}
+{"version":3,"file":"PrevYear.d.ts","sourceRoot":"","sources":["../../../../src/lib/components/atoms/incons/PrevYear.tsx"],"names":[],"mappings":"AAAA,cAAc;AACd,OAAO,KAAK,MAAM,OAAO,CAAC;AAE1B,OAAO,EAAE,SAAS,EAAE,MAAM,mBAAmB,CAAC;;AAc9C,wBAA8B"}
